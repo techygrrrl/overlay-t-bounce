@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bounce</title>
+
+    <!--
+      This animation bounces the T every 20 seconds.
+      Source: https://codepen.io/nelledejones/pen/gOOPWrK
+     -->
+
+    <style>
+      html, body {
+        margin: 10px;
+      }
+
+      .circle {
+        display: inline-block;
+      }
+
+      .bounce {
+        /* The animation is slightly faster and happens every 20 seconds */
+        /* animation: bounce 20s ease infinite; */
+
+        /* The animation is slightly slower but only happens every 30 seconds */
+        animation: bounce 30s ease infinite;
+      }
+
+      /* Original animation, but it happens too frequently */
+      /* @keyframes bounce {
+        70% {
+          transform: translateY(0%);
+        }
+        80% {
+          transform: translateY(-15%);
+        }
+        90% {
+          transform: translateY(0%);
+        }
+        95% {
+          transform: translateY(-7%);
+        }
+        97% {
+          transform: translateY(0%);
+        }
+        99% {
+          transform: translateY(-3%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      } */
+      @keyframes bounce {
+        96% {
+          transform: translateY(0%);
+        }
+        96.5% {
+          transform: translateY(-15%);
+        }
+        97% {
+          transform: translateY(0%);
+        }
+        97.5% {
+          transform: translateY(-7%);
+        }
+        98% {
+          transform: translateY(0%);
+        }
+        98.5% {
+          transform: translateY(-3%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      id="logo-circle"
+      class="circle bounce"
+      width="68"
+      height="68"
+      viewBox="0 0 68 68"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g opacity="0.9">
+        <circle
+          cx="34"
+          cy="34"
+          r="33.5"
+          fill="url(#paint0_radial_1703_20)"
+          stroke="transparent"
+        />
+        <g filter="url(#filter0_d_1703_20)">
+          <path
+            d="M36.0982 23.5393V30.5531C33.7357 30.5531 31.9145 30.5777 30.6349 30.6269C30.4872 35.5488 30.4134 43.8176 30.4134 55.4333L21.7016 54.6212C21.7016 46.0078 21.7754 38.2066 21.9231 31.2175C21.1848 31.2175 19.7821 31.3406 17.7149 31.5867L16.6074 25.5327C17.7887 25.2866 19.6344 24.9667 22.1446 24.5729C22.243 20.9307 22.4399 15.6151 22.7352 8.62598L31.5208 9.43809C31.2255 14.3108 31.004 19.0358 30.8563 23.6132C32.0868 23.564 33.8341 23.5393 36.0982 23.5393Z"
+            fill="white"
+          />
+          <path
+            d="M50.1337 42.6609C50.6751 44.3836 50.9458 46.5985 50.9458 49.3055C50.9458 51.9633 50.6013 54.1782 49.9122 55.9501L39.9453 55.138C40.3883 51.3973 40.6098 48.5426 40.6098 46.5739C40.6098 44.5559 40.5852 42.9563 40.536 41.775L50.1337 42.6609Z"
+            fill="white"
+          />
+        </g>
+        <g filter="url(#filter1_d_1703_20)">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M36.3413 23.2972V30.7966H36.0985C33.8735 30.7966 32.1316 30.8184 30.8712 30.862C30.7281 35.8054 30.6565 43.9953 30.6565 55.434V55.7005L21.459 54.8431V54.6218C21.459 46.1105 21.5311 38.3916 21.6753 31.465C20.904 31.4877 19.5966 31.6079 17.7438 31.8285L17.5173 31.8555L16.3262 25.344L16.5582 25.2956C17.714 25.0548 19.4981 24.7446 21.9076 24.3651C22.0078 20.7276 22.2029 15.4778 22.4928 8.6164L22.5036 8.36133L31.7777 9.2186L31.7635 9.45346C31.4739 14.2317 31.2554 18.8677 31.1078 23.3614C32.3244 23.3185 33.9884 23.2972 36.0985 23.2972H36.3413ZM30.8645 23.3705C30.8619 23.4517 30.8592 23.5328 30.8566 23.6139C30.9356 23.6107 31.0167 23.6076 31.0999 23.6047C32.2667 23.5632 33.852 23.5417 35.8556 23.5401C35.9359 23.5401 36.0168 23.54 36.0985 23.54V30.5537C33.736 30.5537 31.9149 30.5783 30.6352 30.6276C30.6352 30.6276 30.6352 30.6276 30.6352 30.6276C30.4885 35.5149 30.4147 43.7024 30.4137 55.1901C30.4137 55.2712 30.4137 55.3525 30.4137 55.434L21.7019 54.6218C21.7019 46.1081 21.774 38.3879 21.9183 31.4611C21.92 31.38 21.9217 31.299 21.9234 31.2182C21.8491 31.2182 21.7681 31.2194 21.6804 31.2219C20.8961 31.2442 19.5744 31.366 17.7151 31.5873L16.6077 25.5334C17.789 25.2873 19.6347 24.9674 22.1449 24.5736C22.2421 20.9737 22.4356 15.7391 22.7252 8.8696C22.7286 8.78884 22.732 8.70786 22.7355 8.62665L31.5211 9.43877C31.5211 9.43875 31.5211 9.43878 31.5211 9.43877C31.231 14.2251 31.0121 18.8691 30.8645 23.3705ZM50.3172 42.4346L50.3656 42.5888C50.9172 44.3437 51.1889 46.5855 51.1889 49.3062C51.1889 51.983 50.8422 54.2301 50.1388 56.0388L50.0732 56.2075L39.6748 55.3602L39.7044 55.1101C40.1471 51.372 40.3672 48.5287 40.3672 46.5745C40.3672 44.5579 40.3426 42.9622 40.2936 41.7858L40.282 41.5083L50.3172 42.4346ZM39.974 54.8973C40.3981 51.275 40.6101 48.5007 40.6101 46.5745C40.6101 44.6927 40.5887 43.1747 40.5459 42.0205C40.5428 41.937 40.5396 41.8554 40.5362 41.7757L50.134 42.6616C50.6754 44.3843 50.9461 46.5991 50.9461 49.3062C50.9461 51.964 50.6015 54.1789 49.9125 55.9508L39.9457 55.1387C39.9553 55.0578 39.9647 54.9773 39.974 54.8973Z"
+            fill="black"
+          />
+        </g>
+      </g>
+      <defs>
+        <filter
+          id="filter0_d_1703_20"
+          x="12.6074"
+          y="8.62598"
+          width="42.3384"
+          height="55.3242"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_1703_20"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1703_20"
+            result="shape"
+          />
+        </filter>
+        <filter
+          id="filter1_d_1703_20"
+          x="12.3262"
+          y="8.36133"
+          width="42.8628"
+          height="55.8467"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_1703_20"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1703_20"
+            result="shape"
+          />
+        </filter>
+        <radialGradient
+          id="paint0_radial_1703_20"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(34 34) rotate(90) scale(34)"
+        >
+          <stop stop-color="#FF3399" />
+          <stop offset="1" stop-color="#E400DB" />
+        </radialGradient>
+      </defs>
+    </svg>
+  </body>
+</html>
